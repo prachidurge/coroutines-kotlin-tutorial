@@ -77,6 +77,7 @@ fun exampleAsyncAwait() = runBlocking {
     val deferred2 = async { calculateHardThings(20) }
     val deferred3 = async { calculateHardThings(30) }
 
+
     val sum = deferred1.await() + deferred2.await() + deferred3.await()
     println("async/await result = $sum")
 
