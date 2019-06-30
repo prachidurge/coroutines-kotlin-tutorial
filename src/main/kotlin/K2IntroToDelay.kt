@@ -11,7 +11,7 @@ fun k2PrintWithDelay() {
     println("one")
     //printDelayed("two")
     printDelayedRB()
-    printDelayedRB2()
+    //printDelayedRB2()
     println("three")
 }
 

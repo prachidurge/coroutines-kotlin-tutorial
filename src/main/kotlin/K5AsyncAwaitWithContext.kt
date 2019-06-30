@@ -10,10 +10,10 @@ fun main() {
 
 fun k5ExampleAsyncAwait() = runBlocking {
     val startTime =  System.currentTimeMillis()
-    val deferred1 = async {myComplexTheoryOFCoroutinity(startNum = 10)}
-    val deferred2 = async {myComplexTheoryOFCoroutinity(20)}
-    val deferred3 = async {myComplexTheoryOFCoroutinity(startNum = 30)}
-    val sum = deferred1.await() + deferred2.await() + deferred3.await()
+    val deferred1 = async {myComplexTheoryOFCoroutinity(startNum = 10)}.await()
+    val deferred2 = async {myComplexTheoryOFCoroutinity(20)}.await()
+    val deferred3 = async {myComplexTheoryOFCoroutinity(startNum = 30)}.await()
+    val sum = deferred1 + deferred2 + deferred3
     println("async/await result = $sum")
 
     val endTime = System.currentTimeMillis()
